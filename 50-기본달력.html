@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        //오늘의 날짜정보 얻어오기
+        var today = new Date();
+        // 년도
+        var year = today.getFullYear();
+        // 월
+        var month = today.getMonth(); // -1
+        // 이번달 1일의 정보
+        var thisDay = new Date(year, month, 1); //이번년도,이번달,1일 
+        // 이번달 1일은 무슨요일?
+        var thisWeek = thisDay.getDay();
+        console.log(thisWeek);
+        // 각 달의 마지막 날짜 정보 저장하기(배열에 저장)
+        var lastDate = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        //일을 카운트해줄 변수
+        var num = 1;
+
+        //필요한 줄 수를 계산하기
+        //1월 1일 토(6) 31 => 6줄 (6+31)/7 ==> 5.xxx Math.ceil올림 ==>6
+        //1일 토 30 => 6줄 (6+31)/7 ==> 5.xxx ==>6
+        //1일 금(5) 31 => 6줄 (6+31)/7 ==> 5.xxx ==>6
+        //1일 금(5) 30 =>5 (5+30)/7 ==> 5
+        
+        //1일 일(0) 28 => 4줄 (0+28)/7 ==>4
+        
+        var row =Math.ceil((thisWeek+lastDate[month])/7);
+
+
+
+        //달력을 저장할 변수
+        var cal = "<table>";
+        cal += "<tr>"
+        cal += "<th>일</th>"
+        cal += "<th>월</th>"
+        cal += "<th>화</th>"
+        cal += "<th>수</th>"
+        cal += "<th>목</th>"
+        cal += "<th>금</th>"
+        cal += "<th>토</th>"
+        cal += "</tr>"
+        //줄
+        for (i = 1; i <= row; i++) {
+            cal += "<tr>"
+        //칸
+            for (j = 1; j <= 7; j++) {
+                if(i==1 && j<=thisWeek || num>lastDate[month]){
+                    cal += "<td></td>"
+                }
+                else{
+                cal += "<td>"+num+"</td>"
+                num++;
+                }
+            }
+            cal += "</tr>"
+        }
+
+        cal += "</table>";
+
+        document.write(cal);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

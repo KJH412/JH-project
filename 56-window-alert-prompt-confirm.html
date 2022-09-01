@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //alert 설문을 시작합니다. -> 확인 버튼만 있는 창
+        //prompt 나이를 입력받기
+        //confirm으로 확인,취소버튼이 있는 창
+        //확인 나이가 20이상이면 "설문참여가 가능합니다" 20이하면 "설문참여를 할 수 없습니다"
+        window.alert("설명을 시작합니다");
+        var userAge = window.prompt("당신의 나이를 입력하세요",""); 
+        var okCancle = window.confirm("입력한 나이가 맞나요?");  //확인,취소
+        console.log(okCancle);
+        if(okCancle){
+            if(userAge>=20){
+                document.write("설문참여가 가능합니다");
+            }
+            else{
+                document.write("설문참여를 할 수 없습니다");
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 과일의 종류를 저장할 배열
+        // 음식
+        var fruit = ["사과","포도","수박","복숭아"];
+        var lunch = ["해장국","쌀국수","고기의정석"];
+
+        console.log(fruit);
+        console.log(lunch);
+        //배열의 마지막에 데이터 추가하기
+        fruit.push("딸기"); 
+        console.log(fruit);
+
+        // 배열 마지막 데이터 추출
+        fruit.pop();
+        console.log(fruit);
+        // 배열 처음에 데이터 추가
+        lunch.unshift("라면");
+        console.log(lunch);
+        // 배열 처음 데이터 추출
+        lunch.shift();
+        console.log(lunch);
+
+        // fruit의 2번째 위치에 데이터를 2개 추가하기
+        fruit.splice(2,0,"참외","망고");
+        console.log(fruit);
+        // 1번째 위치부터 2개 제거
+        fruit.splice(1,2);
+        console.log(fruit);
+        // 정렬
+        fruit.sort();
+        console.log(fruit);
+        // 역순정렬
+        fruit.reverse();
+        console.log(fruit);
+
+        // 두개의 배열을 합쳐서 새로운 배열 만들기
+        var food =  fruit.concat(lunch);
+        console.log(food);
+
+        //food 데이터들을 *
+        var result = food.join("*");
+        console.log(result);  //문자열로 나타남
+
+        //food 배열의 데이터 개수
+        console.log(food.length);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

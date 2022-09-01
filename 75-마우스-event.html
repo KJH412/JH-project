@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 1000px;
+        }
+    </style>
+    <script>
+        // btn1을 클릭하면 body의 배경색이 변경되도록
+        function bg(){
+            var myBody = document.querySelector("body");
+            myBody.style.backgroundColor = "pink"
+        }
+        window.onload = function(){
+            var myBody = document.querySelector("body");
+            //선택자.이벤트타입 = function(){}
+            //선택자.addEventLsitener("이벤트타입",function(){})
+            document.querySelector(".btn2").ondblclick = function(){
+                myBody.style.backgroundColor = "skyblue";
+            }
+            document.querySelector(".btn3").onmouseover = function(){
+                myBody.style.backgroundColor = "green";            
+            }
+            document.querySelector(".btn4").onmouseout = function(){
+                myBody.style.backgroundColor = "#ccc";            
+            }
+            document.querySelector(".btn5").addEventListener("mousedown",function(e){
+                myBody.style.backgroundColor = "beige";   
+            })
+            document.querySelector(".btn6").addEventListener("mouseup",function(e){
+                myBody.style.backgroundColor = "orange";   
+            })
+            myBody.addEventListener("mousemove",function(e){
+                // console.log(e);
+                console.log(e.type);
+                console.log(e.target);
+                console.log(e.clientX,e.clientY);
+            })
+        }
+    </script>
+</head>
+<body>
+    <button class="btn1" onclick="bg();">click</button>
+    <button class="btn2">dblclick</button>
+    <button class="btn3">mouseover</button>
+    <button class="btn4">mouseout</button>
+    <button class="btn5">mousedown</button>
+    <button class="btn6">mouseup</button>
+    <button class="btn7">mousemove</button>    
+</body>
+</html>

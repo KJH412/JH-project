@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //dom구조를 다 읽은 다음에 스크립트를 실행해라~
+        window.onload = function () {
+            //태그생성하기
+            var hTitle = document.createElement("h1");
+
+            //태그 안에 들어갈 내용물 생성
+            var hText = document.createTextNode("dom객체");
+
+            //생성된 태그안에 내용물 넣기
+            hTitle.appendChild(hText);
+            //body의 자식으로 hTitle 넣기
+            document.body.appendChild(hTitle);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

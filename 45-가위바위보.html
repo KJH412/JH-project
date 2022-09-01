@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //사용자로 부터 가위,바위,보를 입력받아서 컴퓨터와 게임하기
+        // 컴퓨터는 임의의 숫자를 발생시켜서 1 가위, 2 바위, 3 보 가 되도록
+        // 사용자와 컴퓨터가 같은걸 내면 사용자가 이기고, 다른걸 내면 컴퓨터가 이기도록
+        var game = prompt("가위,바위,보 중에 하나를 입력하세요", "");
+        var gameNum;
+
+        switch (game) {
+            case "가위": gameNum = 1;
+                break;
+            case "바위": gameNum = 2;
+                break;
+            case "보": gameNum = 3;
+                break;                
+        }
+        var com = Math.ceil(Math.random()*3);
+
+        if(gameNum == com){
+            document.write("당신이 이겼습니다"+"컴퓨터는"+com)
+        }
+        else{
+            document.write("컴퓨터가 이겼습니다"+"컴퓨터는"+com)
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

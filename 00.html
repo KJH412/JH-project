@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         // ui디자인, ui구현, ui테스트 점수를 입력받아
+        // 평균이 60미만이면 불합격이고
+        // 평균이 60이상이면서 '과락'이 없으면 합격
+        // 평균이 60이상이지만 '과락'이 있으면 과락불합격
+
+        var uiDesign = Number(prompt("ui디자인 점수 입력",""));
+        var ui = Number(prompt("ui구현 점수 입력",""));
+        var uiTest = Number(prompt("ui테스트 점수 입력",""));
+        var avr = (uiDesign+ui+uiTest) /3;
+
+        if(avr<60){
+            document.write("불합격");
+        }else{
+            if(uiDesign>=40 && ui>=40 && uiTest>=40){
+                document.write("합");
+            }
+            else{
+                document.write("불");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

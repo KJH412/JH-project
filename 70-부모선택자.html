@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initiNal-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            padding: 50px;
+            background: pink;
+        }
+        p{
+            background: skyblue;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var p =  document.querySelector('.p');
+            console.log(p.parentElement);
+            console.log(p.parentNode);
+            p.parentElement.classList.add("bg");
+        }
+    </script>
+</head>
+<body>
+    <h1>부모선택자</h1>
+    <p>parentElement</p>
+    <div>
+        <p class="p">부모찾기</p>
+    </div>
+</body>
+</html>

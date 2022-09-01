@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ui디자인, ui구현, ui테스트 점수를 입력받아 각각 var 과목 = 입력 
+        // 평균이 60미만이면 불합격이고  var avr = 평균구하기  /  if(avr<60)
+        // 평균이 60이상이면서 과락이 없으면 합격  if(avr<60){} 60이상으로 만족하면 => else{if(각과목 과락이상){합격}}
+        // 평균이 60이상이지만 과락이 있으면 과락불합격 if(avr<60){}else{if(각과목 과락이상){합격} 만족못하면=> else{불합}}
+
+        var uiDesign = Number(prompt("ui 디자인 점수를 입력하세요",""));
+        var ui = Number(prompt("ui 구현 점수를 입력하세요",""));
+        var uiTest = Number(prompt("ui 테스트 점수를 입력하세요",""));
+        var avg = (uiDesign + ui + uiTest)/3;
+        if(avg<60){
+            document.write("불합격")
+        }
+        else{
+            if(uiDesign>=40 && ui>=40 && uiTest>=40){
+                document.write("합격")            
+            }
+            else{
+                document.write("과락불합격")
+            }
+        }        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

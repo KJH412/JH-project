@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //윈도우의 모든 내용이 로드되면!
+        window.onload=function(){
+            // h1을 선택하여 글자색 변경하기
+            var hTitle = document.getElementsByTagName("h1")[0];
+            hTitle.style.color = "green";
+            //첫번째 p를 선택하여 배경색
+            //var pText = document.getElementsByTagName("p")[0];
+            //pText.style.backgroundColor = "pink";
+
+            var pText = document.querySelector("p");
+            pText.style["backgroundColor"]="hotpink"
+
+            //p전부 선택하기 배열에 들어간다~~  pTag p가3개, pTag.length:3나옴.
+            var pTag = document.querySelectorAll("p");
+            console.log(pTag);
+            for(i=0; i<pTag.length; i++){
+                pTag[i].style["text-decoration"]="underline";
+            }
+
+            //클래스 선택자 글자크기 30
+            //var cText = document.getElementsByClassName("cText")[0];
+            //cText.style.fontSize="30px";
+
+            var cText = document.querySelector(".cText");
+            cText.style["fontSize"]="30px";      
+
+            //id선택자 배경
+            //var idText = document.getElementById("idText");
+            //idText.style.backgroundColor="green";
+
+            var idText = document.querySelector("#idText");
+            idText.style["background-color"]="green";
+            
+            //form선택자
+            document.myform.nuId.style.backgroundColor = "#cccccc";
+
+        }
+    </script>
+    <style>
+        input{
+            border: 10px solid #999;
+        }
+        input:focus{
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>dom 선택자 - 직접 선택자</h1>
+    <p>태그선택자</p>
+    <p class="cText">클래스 선택자</p>
+    <p id="idText">아이디 선택자</p>
+    <form name="myform">
+        <label for="uId">아이디</label>
+        <input type="text" id="uId" name="nuId">
+    </form>    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var list = document.querySelector(".list");
+            console.log(list.firstChild);
+            console.log(list.firstElementChild);
+
+            console.log(list.lastChild);
+            console.log(list.lastElementChild);
+
+            console.log(list.children);
+            console.log(list.childNodes);
+
+            console.log(list.childElementCount);
+        }        
+    </script>
+</head>
+<body>
+    <h1>자식선택자</h1>
+    <p>첫번째자식 - firstElementChild, firstChild</p>
+    <p>마지막자식 - lastElementChild, lastChild</p>
+    <p>자식요소 - children, childNodes</p>
+    <p>자식의개수 - childElementCount</p>
+
+    <ul class="list">
+        <li><a href="#">list1</a></li>
+        <li><a href="#">list2</a></li>
+        <li><a href="#">list3</a></li>
+        <li><a href="#">list4</a></li>
+        <li><a href="#">list5</a></li>
+    </ul>
+
+    
+</body>
+</html>

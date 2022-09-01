@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수 
+        var num1 = -5;
+        var num2 = 3;
+        // 절대값 abs(숫자)
+        document.write(Math.abs(num1),"<br>");
+
+        // 최대값 max()
+        document.write(Math.max(num1,num2,10,100),"<br>");
+
+        // 최소값 min()
+        document.write(Math.min(num1,num2,10,100),"<br>");
+
+        // 거듭제곱 pow(x,y) x의 y승
+        document.write(Math.pow(num2,4),"<br>");
+
+        // 제곱근 sqrt(숫자) 숫자의 제곱근
+        document.write(Math.sqrt(4),"<br>");
+
+        // 랜덤숫자구하기 random() 0~1사이의 숫자발생(소수점나옴0.xxxx)  0~100사이숫자는 *100
+        var rnd = Math.random()*100;
+        document.write(rnd,"<br>")
+        // 소수점처리
+        // 올림 ceil(숫자)
+        document.write(Math.ceil(rnd),"<br>");
+        // 반올림 round(숫자)
+        document.write(Math.round(rnd),"<br>");
+        // 버림 floor(숫자)
+        document.write(Math.floor(rnd),"<br>");
+        
+
+
+    </script>
+    
+</body>
+</html>

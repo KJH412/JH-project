@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //변수 선언하기
+        var num1 = "10.53421"; //문자
+        var num2 = "3.335";  //문자
+        var num3 = 123.45678;
+        var num4 = "char10.9";
+        document.write(Number(num1)+20,"<br>"); //num1+20 =문자+문자라서 더해지지않음.
+        document.write(parseInt(num1)+30,"<br>"); //정수 parseInt
+        document.write(parseFloat(num1)+30,"<br>"); //실수 parseFloat
+        //num3 소수점 2번째자리
+        document.write(num3.toFixed(2),"<br>");
+        document.write(num3.toPrecision(5),"<br>");
+        
+        // num1 숫자가 아니야?
+        // num3,num4
+        document.write(isNaN(num1),"<br>"); //false 숫자맞음.
+        document.write(isNaN(num3),"<br>"); 
+        document.write(isNaN(num4),"<br>"); //true 숫자와 문자섞이면 문자임.
+
+
+
+
+
+
+    </script>
+</body>
+</html>

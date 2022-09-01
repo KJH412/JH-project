@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .active {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .bg {
+            background-color: pink;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var h1 = document.querySelector("h1");
+            console.log(h1);
+            //바로 다음에 오는 형제 선택
+            var next = h1.nextElementSibling;
+            console.log(next);
+            //미리 만들어둔 클래스 적용하기 classList.add("적용할클래스명")
+            next.classList.add("bg");
+
+            //이전에 오는 형제 선택 .menu
+            var menu = document.querySelector(".menu");
+            var prev = menu.previousElementSibling;
+            console.log(prev);
+            prev.classList.add("bg");
+            
+            //prev.addClass("bg"); jQuery
+
+            // 클래스 적용 classList.add
+            // 클래스 제거 remove
+            // 클래스 토글 togle
+
+            // 자식선택자
+            var nav = document.querySelectorAll(".menu>li>a");
+            console.log(nav);
+            for(i=0; i<nav.length; i++){
+            nav[i].classList.add("active");
+            }
+
+            var list = document.querySelector("#list");
+            var listChild = list.children;
+            console.log(listChild);
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>인접선택자</h1>
+    <ul id="list">
+        <li><a href="#">list1</a></li>
+        <li><a href="#">list2</a></li>
+        <li><a href="#">list3</a></li>
+    </ul>
+
+    <h2>이전선택자</h2>
+    <ol class="menu">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+    </ol>
+</body>
+
+</html>

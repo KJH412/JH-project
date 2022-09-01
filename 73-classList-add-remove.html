@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .bg {
+            background: dodgerblue;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var add = document.querySelector(".addBtn");
+            var remove = document.querySelector(".removeBtn");
+            var box = document.querySelector(".box");
+
+            //add 를 클릭하면 bg클래스가 box에 적용되도록
+            add.onclick = function () {
+                box.classList.add("bg");
+                //jquery
+                //선택자.addClass("클래스명");
+            }
+            //remove를 클릭하면 bg클래스가 box에서 제거
+            remove.onclick = function () {
+                box.classList.remove("bg");
+                //jquery
+                //선택자.removeClass("클래스명");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box">box</div>
+    <button class="addBtn">add</button>
+    <button class="removeBtn">remove</button>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = 10;
+        var num2 = 5, num3 = 3;
+        var str = true;
+        // 논리연산자 !
+        console.log(str);
+        console.log(!str);
+        // 논리곱
+        // num2>num1 num3>num2 false && flase ==>false
+        console.log(num2>num1 && num3>num2); //false
+        // num2>num1 num2>num3 false && true ==>false
+        console.log(num2>num1 && num3>num2); //false
+        // num1>num2 num3>num2 true && false ==> false
+        console.log(num1>num2 && num3>num2); //false
+        // num1>num2 num2>num3 true && true ==>true
+        console.log(num1>num2 && num2>num3); //true
+        //논리합 ||
+        // num2>num1 num3>num2 false || false ==>false
+        console.log(num2>num1 || num3>num2); //false
+        // num2>num1 num2>num3 false || true ==> true
+        console.log(num2>num1 || num2>num3); //true
+        // num1>num2 num3>num2 true || false ==> true
+        console.log(num1>num2 || num3>num2); //true
+        // num1>num2 num2>num3 true || true ==>true
+        console.log(num1>num2 || num2>num3); //true
+
+    </script>
+</head>
+
+<body>
+    
+    
+</body>
+</html>

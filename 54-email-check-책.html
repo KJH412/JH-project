@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //사용자로부터 이메일 입력받기
+        //@가 있는지 체크
+        //.co.kr, .com, .net, .go.kr 가 있는지 체크
+        var userEmail = prompt("이메일을 입력하세요","");
+        var arrUrl = [".co.kr", ".com", ".net", ".go.kr"];
+
+        //@
+        var check1 = false;
+        //
+        var check2 = false;
+
+        if(userEmail.indexOf("@")>0){ //골뱅이가 처음부터 시작하지않았으면 해서 >0
+            check1 = true;
+        }
+        for(i=0; i<arrUrl.length; i++){
+            if(userEmail.indexOf(arrUrl[i])>0){
+                check2 = true;
+            }
+        }
+        if(check1 && check2){
+            document.write(userEmail);
+        }
+        else{
+            document.write("형식이 틀림");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

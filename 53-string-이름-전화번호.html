@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //이름
+        var userName=prompt("이름을 영문자로 입력하세요","");
+        //대문자
+        document.write(userName.toUpperCase(),"<br>");
+        //전화번호
+        var userTel = prompt("전화번호를 -없이 입력하세요","");
+        var result = userTel.substr(0,userTel.length-4)+"****";
+        document.write(result);
+
+    </script>
+</head>
+<body>
+    <p>이름을 입력받아서 다 대문자로 변경</p>
+    <p>전화번호를 받아서 앞에 7자리는 그냥 보여주고, 뒤에 4자리는 ****로 보이도록</p>
+</body>
+</html>

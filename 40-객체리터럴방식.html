@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // vue에서 쓰는 방식
+        var TV = {
+            brand:"LG",
+            inch:"",
+            flat:"",
+            on:function(){
+                alert("TV 켜졌습니다");
+            },
+            off:function(){
+                alert("TV 꺼졌습니다");
+            },
+            volumn:function(num){
+                alert("볼륨이"+num+"으로 조절되었습니다");
+            }
+        }
+        console.log(TV.brand);
+        TV.volumn(30);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

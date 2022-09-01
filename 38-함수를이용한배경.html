@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var colorBg = function(color){
+            console.log(color);
+            // document.getElementsByTagName("body")[0]; //옛날방식. 선택자마다 달라서
+            document.querySelector("body").style.backgroundColor = color ;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="colorBg('pink');">pink</button>
+    <button onclick="colorBg('skyblue')">skyblue</button>
+    <button onclick="colorBg('#ccc');">#ccc</button>
+    <button onclick="colorBg('green');">green</button>    
+</body>
+</html>

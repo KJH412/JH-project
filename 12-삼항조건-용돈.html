@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 차비,식비,간식비를 입력받아서 합이 15000이상이면 "용돈관리가 필요합니다~"" 이하면 "참 잘했어요"
+        var bus= prompt("차비를 입력하세요","");
+        var lunch=prompt("식비를 입력하세요","");
+        var coffee=prompt("간식비를 입력하세요","");
+
+        var total= Number(bus)+Number(lunch)+Number(coffee); //prompt는 문자들이라 더해지지않고 붙여써지기만 함.그래서 Number()안에 써줘야함.
+        console.log(total);
+
+        total>15000 ? document.write("용돈관리가 필요") : document.write("참 잘했어요");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //
+        window.onload = function () {
+            //이미지 태그 생성하기
+            var myImg = document.createElement("img");
+            //태그 속성 생성하기 (옛날방식)
+            // myImg.src="images/dunkin03.jpg";
+            // myImg.alt="";
+
+            myImg.setAttribute("src", "images/dunkin02.jpg");  //제이쿼리도 같음.
+            myImg.setAttribute("alt", "던킨"); 
+
+            //body에 이미지 붙이기
+            document.body.appendChild(myImg);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

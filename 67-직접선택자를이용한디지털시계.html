@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myDigit(){
+            //오늘의 날짜 정보를 저장할 변수
+            var today = new Date();
+            //시간
+            var h = today.getHours();
+            // 분
+            var m = today.getMinutes();
+            // 초
+            var s = today.getSeconds();
+            console.log(h+m+s);
+            var myclock = document.querySelector('#myClock');
+            myclock.innerHTML = h+":"+m+":"+s
+        }
+        setInterval("myDigit()",1000);
+    </script>
+</head>
+<body onload="myDigit();">
+    <div id="myClock"></div>    
+</body>
+</html>

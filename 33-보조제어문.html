@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // break
+        // 조건을 만족하면 반복을 끝내도록
+        for (i = 1; i <= 10; i++) {
+            // if(i==5){ break; }   단일if문 중괄호 생략 가능.
+            if(i==5) break;
+            document.write("안녕" + i + "<br>")
+        }
+        // continue
+        // 조건에 맞는것만 skip
+        for (j = 1; j <= 10; j++) {
+            if(j==5) continue;
+            document.write(`안녕하세요${j} <br>`);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

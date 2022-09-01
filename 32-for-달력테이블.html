@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        var num = 1;
+        var cal = "<table>";
+        // 줄 for
+        for (var i = 1; i <= 5; i++) {
+            cal += "<tr>";
+            // 칸 for
+            for (j = 1; j <= 7; j++) {
+                cal +="<td>"+ num++ +"</td>";
+            }
+            cal += "</tr>";
+        }
+
+
+        cal += "</table>";
+        document.write(cal);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

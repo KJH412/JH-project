@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          window.onload = function () {
+            // var menu = document.querySelector(".menu");
+            var list = document.querySelector(".menu");
+            var first = list.firstElementChild.cloneNode(true); //첫번째자식 복사
+            var last = list.lastElementChild.cloneNode(true); //마지막자식 복사
+
+            // menu.appendChild(first);
+            // menu.prepend(last);
+            list.append(first);
+            list.prepend(last);
+
+          }
+    </script>
+</head>
+<body>
+    <h1>복사하기</h1>
+    <p>javascript - cloneNode</p>
+    <p>jQuery - clone</p>
+    <p>자식으로 뒤에 붙이기 - append(es11이하에서 지원안됨), appendChild </p>
+    <p>자식으로 앞에 붙이기 - prepend</p>
+
+    <ul class="menu">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+    </ul>    
+</body>
+</html>
