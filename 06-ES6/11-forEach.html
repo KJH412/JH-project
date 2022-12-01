@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const rain = ["우산","무지개","우비","장화"];
+
+        for(i=0; i<rain.length; i++){
+            document.write(rain[i]+"<br>");
+        }
+
+        //forEach문 (위랑 같은 것.)
+        rain.forEach(item => document.write(item+"<br>"))        
+        var charset = ["ab","bbb","ccc","cab","ab","abc"];
+        //매개변수 3개 들어갈 수 있음.
+        charset.forEach((val,id,arr)=>{  //val은 charset배열 값,순서(인덱스),arr전체배열을 지정해줄 변수
+            if(val == "ab"){
+                arr[id] = "******"; //전체배열arr속 [id]번째에 있는 값val"ab"를 다 ***로 변경.
+                                    //[0]쓰면 0번째 것이 ****됨.
+            }
+        })
+        document.write(charset);      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

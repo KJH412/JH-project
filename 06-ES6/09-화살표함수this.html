@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //농구 관련 객체만들기
+        let Basket = {
+            name:"ball",
+            actions:["shoot","pass","dribble"],  //배열
+            actionName:function(){
+                console.log(this);
+                //배열명.forEach(function(변수){실행할문장};)
+                //배열명, forEach(변수=>실행할 문장);
+                //오브젝트 또는 배열
+                this.actions.forEach(a => console.log(this.name+a))                                                
+            }
+        }
+        console.log(Basket.name);
+        Basket.actionName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

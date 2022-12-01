@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const friends = [
+            {
+                name:"홍길동",
+                age:18,
+                job:"프로그래머",
+                gender:"true",
+            },
+            {
+                name:"오나라",
+                age:38,
+                job:"배우",
+                gender:"false",
+            },
+            {
+                name:"김다래",
+                age:22,
+                job:"프로그래머",
+                gender:"false",
+            },
+            {
+                name:"김판사",
+                age:58,
+                job:"판사",
+                gender:"true",
+            }
+        ];
+
+        // friends에서 gender true만 추출하여 새로운 배열 만들기 result
+        let result = friends.filter(x => x.gender=="true");//문자처럼("")안에 넣어놔서 "true"로 써줘야함.
+        console.log(result);
+        //friends에서 나이가 20이상이고 index가 2인 사람 추출 result2
+        // let result2 = friends.filter((x,i)=> x.age>=20 && i==2 );
+        let result2 = friends.filter((x,i)=>{ //두줄로쓰기 => {중괄호안에 반드시 return쓰기! }
+            return x.age>=20 && i==2
+        });        
+        console.log(result2);
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

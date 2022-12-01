@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.일반함수 선언적
+        function hi1(uname){
+            document.write(uname+"안녕~ <br>");
+        }
+        //2.익명적함수 변수형
+        let hi2 = function(uname){
+            document.write(`${uname} 안녕<br>`);
+        }
+        //3.화살표 함수
+        let hi3 = uname =>{
+            document.write(`${uname} 하이<br>`);
+        }
+        let hi4 = (uname,num) =>{
+            document.write(`${uname} 하이 ${num}<br>`);
+        }
+
+        hi1("일반함수");
+        hi2("익명적함수");
+        hi3("화살표함수");
+        hi4("화살표",10);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

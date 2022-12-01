@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //배열 선언하기
+        let data = [10,5,"홍길동","null",""]; //data.length ==5
+        let str = "javascript es6!";
+
+        //이전버전
+        for(var i=0; i<data.length; i++){  
+            console.log(data);
+        }
+
+        //for in
+        for(let i in data){   //let i (변수)
+            console.log(data[i]);    //[i] 0,1,2,...번쨰가 인덱스i
+        }
+
+        //for of : (주로 배열을)하나씩 쪼개서(분리해서) 출력(배열은 순서대로 "값"이, 문자열은 한 문자씩 출력됨.)
+        for(let el of data){  //let el (변수)
+            console.log(el);
+        }
+
+        //str안에 문자를 하나씩 분리해서 출력
+        for(let str1 of str){      //let str1 (변수)
+            console.log(str1);
+        }
+
+        //객체 선언하기     //변수선언하고 안에 함수선언함. <-- Vue가 이렇게 씀.
+        let TV ={
+            blend:"LG",    //(인덱스),(인덱스),...
+            inch:"75inch",
+            flat:"curve",
+            on:function(){
+                alert("TV가 켜졌습니다.");
+            },
+            off:function(){
+                alert("TV가 꺼졌습니다.");
+            }
+        }
+
+        for(let index in TV){
+            console.log(`TV.${index} = ${TV[index]}`); 
+        }
+
+        //forEach   (이건 거의 99% 화살표 함수씀. 이렇게 잘 안씀.)
+        data.forEach(function(item){  //각각 분리해서 iteam에 저장
+            console.log(item);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

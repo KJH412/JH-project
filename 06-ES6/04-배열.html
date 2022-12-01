@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //이전버전
+        var arr = ["사과","배","포도"];
+        console.log(arr);
+
+        //es6
+        let [a,b,c] = [1,3,5];
+        console.log(a,b,c);
+        let store = ["과일","음료","빵","커피","치약"];
+        let [fruit,,,,life] = store; //,(공백),
+        console.log(fruit,life); //첫번째,마지막
+        
+        let [fruit1,drink,...rest]=store; //...rest 여기안에 나머지데이터 배열로 들어감. 
+        console.log(rest);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 일반함수, 선언적
+        function hi1(){
+            document.write("일반함수~ 안녕 <br>");
+        }
+
+        //2.변수형,익명적 ㅎ마수
+        var hi2 = function(){
+            document.write("변수형익명함수~~<br>");
+        }
+        //3.화살표 함수
+        let hi3 = () => { document.write("화살표함수~"); }
+        hi1();
+        hi2();
+        hi3();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

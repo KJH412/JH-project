@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Dog 오브젝트(객체) 만들기
+        //일반함수
+        function dog(){
+            this.name = "흰둥이";
+            return{
+                name:"검둥이",
+                bark:function(){
+                    document.write(this.name+"왈왈<br>");
+                }
+            }
+        }
+        let myDog = new dog(); //오브젝트를 저장할 변수만듦. dog()안에는bark라는 메소드가 있다.
+        document.write(myDog.name+"<br>"); 
+        myDog.bark(); //함수dog()속 메서드bark()의 this.name 이 return속 name으로나옴.
+        //속해 있는 곳의 속성을 지정.
+
+        // 화살표함수
+        function dog2(){
+            this.name = "흰둥이"; //<= this.name <= myDog2.bark();
+            return{
+                name:"검둥이",
+                bark:()=>{
+                    document.write(this.name+"왈왈<br>");
+                }
+            }
+        }
+        let myDog2 = new dog2();
+        document.write(myDog2.name+"<br>"); 
+        myDog2.bark(); //전체 객체가 속해있는 속성을 지정.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

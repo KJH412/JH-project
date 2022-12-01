@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = () => {
+            return new Date();
+        }
+        // let b = () =>{
+        //     return a*a;
+        // }
+        //실행될 문장이 하나이면 return 생략가능.
+        let b = i => i*i;
+
+        let c = (i,j) => i+j;
+
+        let d = (i,j) => i*j;
+
+        console.log(a());
+        console.log(b(5));
+        console.log(c(1,4));
+        console.log(d(2,4));
+
+      
+    </script>
+</head>
+<body>
+    <pre>
+    var a = function(){
+        return new Date()
+    };
+    var b = function(a){
+        return a*a
+    };
+    var c = function(a,b){
+        return a+b
+    };
+    var d = function(a,b){
+        console.log(a*b)
+    };
+    </pre>
+</body>
+</html>

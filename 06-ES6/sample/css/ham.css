@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    /* color: #fff; */
+}
+.menuWrap{
+    position: fixed;
+    /* 상하좌우 전부 0을 주면 w:100% h:100%가됨. */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+.activeMenu{
+    transform: translateX(0);
+}
+.menuWrap>.nav{
+    width: 70%;
+    background: white;
+    line-height: 3;
+    text-indent: 20px;
+}
+.hamClose{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+.hamClose>a{
+    display: block;
+    width: 45px;
+    height: 48px;
+    background-image: url(../img/ham.png);
+    text-indent: -99999px;
+}
+.hamClose>.on{
+    background-image: url(../img/close.png);
+}

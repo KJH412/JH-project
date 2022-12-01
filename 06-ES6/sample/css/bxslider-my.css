@@ -1,0 +1,22 @@
+.listWrap{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#pager>div{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+#pager .bx-pager-item a{
+    display: block;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+#pager .bx-pager-item a.active{
+    background: black;
+    color: white;
+}

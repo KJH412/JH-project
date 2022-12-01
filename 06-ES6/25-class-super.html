@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //동물 클래스 만들기
+        class Animal{
+            //변수
+            constructor(kind){
+                this.aKind=kind;
+            }
+            //메서드
+            bark(){
+                console.log(`${this.aKind}는 너무 귀여워~~`);
+            }
+        }
+        let ani = new Animal("강아지");
+        ani.bark();
+
+        //Love 클래스 만들기 Animal 클래스를 상속받아서 사용되고,
+        //Love에 추가로 leg를 속성으로 사용하고,
+        //bark2메서드에서는 '다리가 몇개라서 더 사랑스러워' 출력
+        class Love extends Animal{
+            //속성
+            constructor(kind,leg){
+                super(kind);
+                this.aLeg = leg;
+            }
+            //메서드
+            bark2(){
+                console.log(`${this.aKind}는 다리가 ${this.aLeg}개라서 더 사랑스러워`);
+            }
+        }
+        let love = new Love("고양이",4);
+        console.log(love);
+        love.bark2();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

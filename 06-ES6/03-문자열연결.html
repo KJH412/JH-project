@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //이전버전 문자열 연결
+        let num1 = 10;
+        let num2 = 5;
+        let num3 = 3;
+        let total = num2 + "더하기" + num3 + "는" + num1 + "입니다.";
+        console.log(total);
+
+        //es6 문자열 연결
+        let total2 = `${num2}더하기${num3}는 ${num1}입니다.`;
+        console.log(total2);
+
+        let program = "javascript!";
+        let count1 = 8;
+        let count2 = 2;
+        console.log(program +"를"+count1+count2+"번 반복하세요."); //82번
+
+        console.log(`${program}를 ${count1+count2}번 반복하세요.`); //10번
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

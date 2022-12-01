@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //사람과 관련된 클래스(객체) 만들기
+        class Person{
+            //변수
+            constructor(name,age,tel,city){
+                this.uName=name;
+                this.uAge=age;
+                this.uTel=tel;
+                this.uCity=city;
+            }
+            //메서드
+            nextYear(){
+                return Number(this.uAge)+1;
+            }
+        }
+
+        let user = new Person("홍길동",18,"010-1111-1111","seoul");
+        console.log(user);
+        console.log(user.nextYear()); //19
+
+        let kim = new Person("김판사","38","010-222-2222","busan");
+        console.log(kim);
+        console.log(kim.nextYear()); //39
+
+        //상속 extends
+        class Cafe extends Person{
+            //메서드
+            drink(){
+                return `나 ${this.uName}는 ${this.uCity}에서 커피마시는걸 좋아해요`
+            }
+        }
+
+        let park = new Cafe("박세리",33,"010-3333-3333","inchon");
+        console.log(park.drink());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>class</h1>
+    <p>객체 지향 프로그램에서 특정한 객체를 생성하기위한 변수와 메서드를 정의하는 틀을 클래스라고 한다.</p>
+    
+    <h2>클래스를 만드는 방식</h2>
+    <h3>1. 리터럴 방식 - vue</h3>
+    <pre>
+        var 인스턴스명 = {
+            속성:값,
+            속성(변수):값,
+            메서드:function(){
+
+            },
+            메서드:function(){
+                
+            }
+        }
+    </pre>
+    <h3>2. 함수선언 방식</h3>
+    <pre>
+        function 클래스명(){
+            this.속성=값;
+            this.속성=값;
+            this.메서드=function(){
+
+            };
+            this.메서드=function(){
+
+            };
+        }
+    </pre>
+    <h3>3. 프로토타입방식</h3>
+    <pre>
+        function 클래스명(){
+            this.속성=값;
+            this.속성=값;
+        }
+
+        클래스명.prototype.메서드명=function(){
+            
+        }
+        클래스명.prototype.메서드명=function(){
+            
+        }
+    </pre>
+    <!-- es6 class -->
+    <h3>es6 class - react</h3>
+    class 클래스명{
+        변수(속성)=값;
+        constructor(매개변수1,매개변수2){
+            this.변수=매개변수1
+        }
+        메서드명(){
+
+        }
+    }
+
+</body>
+</html>

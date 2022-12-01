@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.배열의 데이터 복사하기
+        var arr1=[1,2,3,4];
+
+        //이전버전 [100,1,2,3,4];
+        var newArr1 = [100,arr1[0],arr1[1],arr1[2],arr1[3]];
+        console.log(newArr1);
+        //es6 spread
+        let newArr2 = [100,...arr1];
+        console.log(newArr2);
+        
+        //2.오브젝트 데이터 복사하기
+        var obj1 = {
+            a:11,
+            b:22,
+            name:"홍길동"
+        }
+        //이전버전
+        var newObj1={
+            a:obj1.a,
+            b:obj1.b,
+            name:obj1.name
+        }
+        console.log(newObj1);
+        
+        //es6
+        let newObj2={
+            ...obj1
+        }
+        console.log(newObj2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

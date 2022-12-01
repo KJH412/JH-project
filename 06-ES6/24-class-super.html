@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //사람클래스 만들기
+        class Person{
+            //변수 constructor
+            constructor(name,age,city){
+                this.uName=name;
+                this.uAge=age;
+                this.uCity=city;
+            }
+            //메서드
+            newYear(){
+                return Number(this.uAge)+1;
+            }
+        }
+
+        //상속
+        class Cafe extends Person{
+            //변수 constructor
+            constructor(name,age,job,city){
+                super(name,age,city);  //class Person의 변수 그대로 사용.
+                this.uJob=job; //class Cafe에서 새롭게 선언된 변수
+            }
+            //메서드
+            drink(){
+            return `나 ${this.uName}는 ${this.uCity}에서 커피마시는걸 좋아해요. 
+            나의 직업은 ${this.uJob}입니다.`
+            }
+        }
+        let park = new Cafe("박세리",33,"프로골퍼","제주도"); 
+        console.log(park.drink());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
